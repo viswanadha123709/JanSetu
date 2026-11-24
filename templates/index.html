@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JanSetu - Know. Understand. Apply. | AI-Powered Schemes & Fine Print Assistant</title>
+  <meta name="description" content="Centralized platform helping Indian citizens discover verified government schemes, scholarships, education loans, and detect fine-print hidden conditions in policies.">
+  
+  <!-- Favicon / Branding -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇮🇳</text></svg>">
+  
+  <!-- Tailwind CSS (Local Vendor) -->
+  <script src="{% static 'vendor/tailwindcss.js' %}"></script>
+  
+  <!-- Custom Modern CSS -->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  
+  <!-- React & ReactDOM (Local Vendor) -->
+  <script src="{% static 'vendor/react.production.min.js' %}"></script>
+  <script src="{% static 'vendor/react-dom.production.min.js' %}"></script>
+  
+  <!-- Babel Standalone for JSX transformation (Local Vendor) -->
+  <script src="{% static 'vendor/babel.min.js' %}"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="{% static 'vendor/lucide.min.js' %}"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased min-h-screen">
+  <!-- React Root Container -->
+  <div id="root"></div>
+
+  <!-- CSRF Token Carrier for JavaScript -->
+  {% csrf_token %}
+
+  <!-- Core Scripts -->
+  <script src="{% static 'js/translations.js' %}"></script>
+  <script src="{% static 'js/api.js' %}"></script>
+
+  <!-- React Components (Transpiled in browser via Babel) -->
+  <script type="text/babel" src="{% static 'js/components/Navbar.js' %}"></script>
+  <script type="text/babel" src="{% static 'js/components/LandingPage.js' %}"></script>
+  <script type="text/babel" src="{% static 'js/components/SchemeDiscovery.js' %}"></script>
+  <script type="text/babel" src="{% static 'js/components/PolicyDiscovery.js' %}"></script>
+  <script type="text/babel" src="{% static 'js/components/AIChatbot.js' %}"></script>
+  <script type="text/babel" src="{% static 'js/components/DocumentUpload.js' %}"></script>
+  <script type="text/babel" src="{% static 'js/components/Dashboard.js' %}"></script>
+  <script type="text/babel" src="{% static 'js/components/AuthModal.js' %}"></script>
+  <script type="text/babel" src="{% static 'js/app.js' %}"></script>
+</body>
+</html>

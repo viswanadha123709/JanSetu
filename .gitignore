@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local environment
+.env
+environment/
+env/
+venv/
+*.sqlite3-journal
+
+# Media user uploads (avoid uploading local tests to git)
+media/uploads/*
+!media/uploads/.gitkeep
+!media/sample_docs/
+
+# Static collected
+staticfiles/
+
+# VS Code / OS
+.vscode/
+.DS_Store
+Thumbs.db
